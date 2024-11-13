@@ -2,7 +2,6 @@
 aplikasi Python sederhana yang menggunakan pustaka Web3 untuk melakukan transfer Ether peer-to-peer di jaringan Ethereum, terhubung ke Ganache sebagai jaringan blockchain lokal. Dalam proyek ini, aplikasi melakukan beberapa langkah penting seperti validasi kunci pribadi, pengaturan transaksi dengan data biaya gas dan nonce, hingga pengiriman dan konfirmasi transaksi menggunakan tanda tangan digital. Selain itu, aplikasi memeriksa saldo awal dan akhir kedua akun untuk menampilkan perubahan saldo setelah transaksi selesai.
 
 Contoh Output
-C:\Users\Volthz\Desktop\tugas>py test.py
 Terhubung ke Ganache!
 Masukkan jumlah Ether yang akan dikirim:0.222
 -----------------------------------------------------------------------------
