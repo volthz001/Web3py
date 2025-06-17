@@ -1,16 +1,72 @@
-# Web3py
-aplikasi Python sederhana yang menggunakan pustaka Web3 untuk melakukan transfer Ether peer-to-peer di jaringan Ethereum, terhubung ke Ganache sebagai jaringan blockchain lokal. Dalam proyek ini, aplikasi melakukan beberapa langkah penting seperti validasi kunci pribadi, pengaturan transaksi dengan data biaya gas dan nonce, hingga pengiriman dan konfirmasi transaksi menggunakan tanda tangan digital. Selain itu, aplikasi memeriksa saldo awal dan akhir kedua akun untuk menampilkan perubahan saldo setelah transaksi selesai.
+# Web3py Project
 
-Contoh Output
-Terhubung ke Ganache!
-Masukkan jumlah Ether yang akan dikirim:0.222
------------------------------------------------------------------------------
-||TRANSAKSI BERHASIL!!!                                                     ||
-||txn_Hash: 80e8d9642305ff1a2946b7a4feec9488f97aee3e0bf1f46242b9e39c1650dd69||
-||Pengirim: 0x6DeFa57af17C310Dee28E5A6C5f83CeA2a447E10                      ||
-||Penerima: 0xb7e2db54B010504B06a8BaBCEb7fDAc316656f9e                      ||
-||Biaya transaksi: 0.00042 Ether                                            ||
-||Status Transaksi: 1                                                       ||
-||Time : 2024-11-13 01:47:14                                                ||
------------------------------------------------------------------------------
-Saldo Anda saat ini 986.536325 Etherum
+A beginner-friendly Python project that demonstrates basic interaction with the Ethereum blockchain using the [Web3.py](https://web3py.readthedocs.io/) library.
+
+## ✨ Features
+- Connect to a local or remote Ethereum node (HTTP provider)
+- Read Ethereum account balances
+- Send transactions (ETH transfer)
+- Call smart contract methods
+
+## 📆 Requirements
+- Python 3.8+
+- Ganache CLI or Infura endpoint
+
+## ⚙️ Installation
+```bash
+# Clone the repository
+$ git clone https://github.com/volthz001/Web3py.git
+$ cd Web3py
+
+# Create virtual environment (optional)
+$ python -m venv venv
+$ source venv/bin/activate  # on Windows use venv\Scripts\activate
+
+# Install dependencies
+$ pip install -r requirements.txt
+```
+
+## 📊 Usage
+Edit the `config.py` file to set your RPC endpoint, account addresses, and private keys.
+
+```bash
+$ python main.py
+```
+
+## 👁️ Example
+```python
+from web3 import Web3
+
+web3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
+print("Connected:", web3.is_connected())
+print("Balance:", web3.eth.get_balance("0x1234..."))
+```
+
+## ✏️ Configuration
+Update `config.py` with your:
+- RPC provider URL (Ganache, Infura)
+- Sender and receiver addresses
+- Private key for signing transactions
+
+## □ Project Structure
+```
+Web3py/
+├── main.py
+├── config.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+└── tests/
+    └── test_web3.py
+```
+
+## ✅ To Do
+- [ ] Add smart contract interaction (via ABI)
+- [ ] Add unit tests with mocking
+- [ ] Setup GitHub Actions CI/CD
+
+## ✉️ License
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+## 👥 Author
+Hizkia Siallagan
